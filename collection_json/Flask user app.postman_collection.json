@@ -33,7 +33,66 @@
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Add",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Ronnie Saba\",\n  \"email\": \"ronnie@example.com\",\n  \"phone\": \"12345678\",\n  \"address\": \"Beirut\",\n  \"country\": \"Lebanon\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/add",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "add"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.8 Python/3.13.15"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 06 Oct 2026 14:31:08 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "122"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"address\": \"Beirut\",\n    \"country\": \"Lebanon\",\n    \"email\": \"ronnie@example.com\",\n    \"name\": \"Ronnie Saba\",\n    \"phone\": \"12345678\",\n    \"user_id\": 1\n}"
+        }
+      ]
     },
     {
       "name": "GetAllUsers",
@@ -51,7 +110,56 @@
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "GetAllUsers",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/users",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.8 Python/3.13.15"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 06 Oct 2026 14:42:24 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "124"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"address\": \"Beirut\",\n        \"country\": \"Lebanon\",\n        \"email\": \"ronnie@example.com\",\n        \"name\": \"Ronnie Saba\",\n        \"phone\": \"12345678\",\n        \"user_id\": 1\n    }\n]"
+        }
+      ]
     },
     {
       "name": "UpdateUser",
@@ -79,7 +187,124 @@
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "UpdateUser",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_id\": {{user_id}},\n  \"name\": \"Ronnie Saba\",\n  \"email\": \"ronnie@example.com\",\n  \"phone\": \"87654321\",\n  \"address\": \"Hamra, Beirut\",\n  \"country\": \"Lebanon\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/update",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "update"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.8 Python/3.13.15"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 06 Oct 2026 14:42:32 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "129"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"address\": \"Hamra, Beirut\",\n    \"country\": \"Lebanon\",\n    \"email\": \"ronnie@example.com\",\n    \"name\": \"Ronnie Saba\",\n    \"phone\": \"87654321\",\n    \"user_id\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "GetSpecficUser",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "GetSpecficUser",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/users/{{user_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "{{user_id}}"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.8 Python/3.13.15"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 06 Oct 2026 14:42:55 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "129"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"address\": \"Hamra, Beirut\",\n    \"country\": \"Lebanon\",\n    \"email\": \"ronnie@example.com\",\n    \"name\": \"Ronnie Saba\",\n    \"phone\": \"87654321\",\n    \"user_id\": 1\n}"
+        }
+      ]
     },
     {
       "name": "DeleteUser",
@@ -99,15 +324,58 @@
           ]
         }
       },
-      "response": []
-    },
-    {
-      "name": "GetSpecficUser",
-      "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
+      "response": [
+        {
+          "name": "DeleteUser",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/users/delete/{{user_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "delete",
+                "{{user_id}}"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.8 Python/3.13.15"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 06 Oct 2026 14:43:00 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "39"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"User deleted successfully\"\n}"
+        }
+      ]
     }
   ],
   "event": [
