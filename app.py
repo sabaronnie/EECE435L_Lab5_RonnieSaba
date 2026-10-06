@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify #added to top of file
 from flask_cors import CORS #added to top of file
-from database import get_users, get_user_by_id, insert_user, update_user, delete_user
+from database import create_db_table, get_users, get_user_by_id, insert_user, update_user, delete_user
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
@@ -28,6 +28,7 @@ def api_delete_user(user_id):
     return jsonify(delete_user(user_id))
 
 if __name__ == "__main__":
+    create_db_table()
     #app.debug = True
     #app.run(debug=True)
     app.run() #run app
