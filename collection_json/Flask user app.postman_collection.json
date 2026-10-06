@@ -82,24 +82,6 @@
       "response": []
     },
     {
-      "name": "GetAllUsers2",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "{{base_url}}/api/users",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "api",
-            "users"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
       "name": "DeleteUser",
       "request": {
         "method": "DELETE",
@@ -120,20 +102,10 @@
       "response": []
     },
     {
-      "name": "GetAllUsers3",
+      "name": "GetSpecficUser",
       "request": {
         "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "{{base_url}}/api/users",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "api",
-            "users"
-          ]
-        }
+        "header": []
       },
       "response": []
     }
