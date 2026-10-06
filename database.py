@@ -132,3 +132,6 @@ def delete_user(user_id):
         conn.close()
 
     return message
+
+if __name__ == "__main__":
+    create_db_table()
